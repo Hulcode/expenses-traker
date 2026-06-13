@@ -5,7 +5,7 @@ import { useUserAuth } from "../../hooks/getUserInfo";
 import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/paths";
 import Modal from "../../componants/Modal";
-import AddIncomeForm from "../../componants/income/addIncomeForm";
+import AddIncomeForm from "../../componants/income/AddIncomeForm";
 import { toast } from "react-hot-toast";
 import IncomeList from "../../componants/income/IncomeList";
 import DeleteAlert from "../../componants/DeleteAlert";
