@@ -37,8 +37,14 @@ const SignUp = () => {
       let imageUrl = "";
 
       if (image) {
-        const imageUpload = await uploadImage(image);
-        imageUrl = imageUpload.imageUrl || "";
+        try {
+          // ← wrap image upload
+          const imageUpload = await uploadImage(image);
+          imageUrl = imageUpload.imageUrl || "";
+        } catch (imgError) {
+          console.error("Image upload failed:", imgError.message);
+          // continue signup without image
+        }
       }
 
       const response = await axiosInstance.post(API_PATHS.AUTH.REGISTER, {
