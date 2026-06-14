@@ -1,8 +1,7 @@
 const express = require("express");
 const jwtCheck = require("../../utilities/utilities");
-const { upload, cloudinary } = require("../utilities/cloudinary");
+const { upload, cloudinary } = require("../../utilities/cloudinary");
 
-const upload = require("../../utilities/uploadMiddleware");
 const {
   registerUser,
   loginUser,
